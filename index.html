@@ -25,19 +25,19 @@
   document.getElementById('title').textContent = "LIST";
   
   function  addTask () {  
-  document.getElementById('btn').addEventListener('click', () => {
-    const task = document.getElementById('textbox').value;
-    let tasks = [];
-    tasks.push(task);
-    for(let i = 0; i < tasks.length; i++){
-    let li = document.createElement('li');
-    li.textContent = tasks[i];
+    document.getElementById('btn').addEventListener('click', () => {
+      const task = document.getElementById('textbox').value;
+      let tasks = [];
+      tasks.push(task);
+      for(let i = 0; i < tasks.length; i++){
+      let li = document.createElement('li');
+      li.textContent = tasks[i];
 
-    document.getElementById('list').appendChild(li);
-   }
-   document.getElementById('form').reset(); 
-  });
-}
+      document.getElementById('list').appendChild(li);
+      }
+      document.getElementById('form').reset(); 
+    });
+  }
 
 addTask()
 
