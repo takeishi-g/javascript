@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do LIST</title>
+  <style>
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body style="width: 50%; margin:auto;">
+  <div style="text-align: center;">
+    <h1>To Do LIST</h1>
+    <form action="#" id="form">
+      <input type="text" name="name" id="textbox">
+      <button type="button" id="btn" value="submit">ADD</button>
+    </form>
+    <div id="title"></div>
+    <hr>
+    <ul id="list" style="padding: 0;"></ul>
+  </div>
+  <script>
+  document.getElementById('title').textContent = "LIST";
+  
+  function  addTask () {  
+  document.getElementById('btn').addEventListener('click', () => {
+    const task = document.getElementById('textbox').value;
+    let tasks = [];
+    tasks.push(task);
+    for(let i = 0; i < tasks.length; i++){
+    let li = document.createElement('li');
+    li.textContent = tasks[i];
+
+    document.getElementById('list').appendChild(li);
+   }
+   document.getElementById('form').reset(); 
+  });
+}
+
+addTask()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
